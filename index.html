@@ -18,38 +18,63 @@
         <div class="box"></div>
         <div class="box"></div>
     </div>
+    <a href="#" id='source'>&lt;/&gt;</a>
+    <a href="https://github.com/flynngao" id="name"><span>Design By </span><img src="http://tp2.sinaimg.cn/1674540501/180/40013708336/1" alt=""></a>
     <div id="menu">      
-        <a href="" data-class="swash">
-            <div class="square crimson"></div>
+        <a href="" data-class="swashIn">
+            <div class="square"></div>
         </a>
-        
-        <a href="" data-class="swash"><div class="square voiletred"></div></a>
-        
-        <a href="" data-class="swash"><div class="square deepskyblue"></div></a>
-        <a href="" data-class="swash"><div class="square lime"></div></a>
-        <a href="" data-class="swash"><div class="square gold"></div></a>
-        <a href="" data-class="swash"><div class="square darkorange"></div></a>
+        <a href="" data-class="puffIn"><div class="square"></div></a>
+        <a href="" data-class="rotateIn"><div class="square"></div></a>
+        <a href="" data-class="slideIn1"><div class="square"></div></a>
+        <a href="" data-class="slideIn2"><div class="square"></div></a>
+        <a href="" data-class="swash"><div class="square"></div></a>
         <a href="" data-class="swash"><div class="square "></div></a>
         <a href="" data-class="swash"><div class="square"></div></a>
         <a href="" data-class="swash"><div class="square"></div></a>
         <a href="" data-class="swash"><div class="square"></div></a>
     </div>
+    <div id="code" class="fn-hide"><textarea name="" id="" cols="30" rows="10" class="html" readonly="">
+        <div id='animate9' class=" fn-clear">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+    </textarea><textarea name="" id="" cols="30" rows="10" class="css" readonly=""></textarea></div>
     <script>
         $(document).ready(function($) {
             var animate9 = $('#animate9')
             $('#menu a').click(function(e) {
                 var cls = $(this).data('class')
-                var color = $(this).find('.square').css('background')
+                var color = $(this).find('.square').css('background-color')
                 $('#menu a').removeClass('active');
                 $(this).addClass('active')
                 e.preventDefault();
                 animate9.addClass(cls);
                 setTimeout(function  () {
-                    animate9.removeClass(cls);    
+                    $('body').css('background-color',color)
+                },200)
+                setTimeout(function  () {
+                    animate9.removeClass(cls);
+
                 },2000)
-                $('body').css('background',color)
+                
+            });
+
+            $('#source').click(function(e) {
+                e.preventDefault();
+                $('#code').removeClass('fn-hide').addClass('swash')
             });
         });
+
+
         
     </script>
 </body>
