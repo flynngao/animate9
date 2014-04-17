@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animate9</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="http://cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
+</head>
+<body>
+    <div id='animate9' class=" fn-clear">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <div id="menu">      
+        <a href="" data-class="swash">
+            <div class="square crimson"></div>
+        </a>
+        
+        <a href="" data-class="swash"><div class="square voiletred"></div></a>
+        
+        <a href="" data-class="swash"><div class="square deepskyblue"></div></a>
+        <a href="" data-class="swash"><div class="square lime"></div></a>
+        <a href="" data-class="swash"><div class="square gold"></div></a>
+        <a href="" data-class="swash"><div class="square darkorange"></div></a>
+        <a href="" data-class="swash"><div class="square "></div></a>
+        <a href="" data-class="swash"><div class="square"></div></a>
+        <a href="" data-class="swash"><div class="square"></div></a>
+        <a href="" data-class="swash"><div class="square"></div></a>
+    </div>
+    <script>
+        $(document).ready(function($) {
+            var animate9 = $('#animate9')
+            $('#menu a').click(function(e) {
+                var cls = $(this).data('class')
+                var color = $(this).find('.square').css('background')
+                $('#menu a').removeClass('active');
+                $(this).addClass('active')
+                e.preventDefault();
+                animate9.addClass(cls);
+                setTimeout(function  () {
+                    animate9.removeClass(cls);    
+                },2000)
+                $('body').css('background',color)
+            });
+        });
+        
+    </script>
+</body>
+</html>
