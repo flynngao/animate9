@@ -2,12 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
     <title>Animate9</title>
     <link rel="stylesheet" href="index.css">
     <script src="http://cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
 </head>
 <body>
-    <div id='animate9' class=" fn-clear">
+    <div id='animate9' class="fn-clear">
         <div class="box"></div>
         <div class="box"></div>
         <div class="box"></div>
@@ -28,26 +34,13 @@
         <a href="" data-class="rotateIn"><div class="square"></div></a>
         <a href="" data-class="slideIn1"><div class="square"></div></a>
         <a href="" data-class="slideIn2"><div class="square"></div></a>
-        <a href="" data-class="swash"><div class="square"></div></a>
-        <a href="" data-class="swash"><div class="square "></div></a>
+        <a href="" data-class="trans3dx"><div class="square"></div></a>
+        <a href="" data-class="trans3dy"><div class="square "></div></a>
         <a href="" data-class="swash"><div class="square"></div></a>
         <a href="" data-class="swash"><div class="square"></div></a>
         <a href="" data-class="swash"><div class="square"></div></a>
     </div>
-    <div id="code" class="fn-hide"><textarea name="" id="" cols="30" rows="10" class="html" readonly="">
-        <div id='animate9' class=" fn-clear">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-        </div>
-
-    </textarea><textarea name="" id="" cols="30" rows="10" class="css" readonly=""></textarea></div>
+    
     <script>
         $(document).ready(function($) {
             var animate9 = $('#animate9')
@@ -68,10 +61,10 @@
                 
             });
 
-            $('#source').click(function(e) {
-                e.preventDefault();
-                $('#code').removeClass('fn-hide').addClass('swash')
-            });
+            // $('#source').click(function(e) {
+            //     e.preventDefault();
+            //     $('#code').removeClass('fn-hide').addClass('swash')
+            // });
         });
 
 
